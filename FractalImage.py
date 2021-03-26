@@ -25,7 +25,7 @@ class FractalImage:
     def to_grayscale(self):
         self.img = self.img.convert('L')
 
-    def fractal_dimension(self):
+    def fractal_dimension_minkowski(self):
         sizes = [i + 1 for i in range(30)]
         pixels = self.img.load()
         counts = []
@@ -47,3 +47,40 @@ class FractalImage:
         res = stats.linregress(log_sizes, counts)
         return res.slope
 
+    def fractal_dimension_blanket(self):
+        cell_size = int(min(self.width, self.height) / 100)
+        deltas = [1, 2]
+        a_deltas = [0, 0]
+
+        for x in range(int(self.width / cell_size)):
+            for y in range(int(self.height / cell_size)):
+                img = self.img.crop((x, y, x + cell_size, y + cell_size))
+                pixels = img.load()
+
+                u = np.zeros((3, cell_size + 1, cell_size + 1))
+                b = np.zeros((3, cell_size + 1, cell_size + 1))
+
+                vol = np.zeros(3)
+
+                for delta in deltas:
+                    for i in range(cell_size):
+                        for j in range(cell_size):
+                            u[0][i][j] = pixels[i, j]
+                            b[0][i][j] = pixels[i, j]
+
+                            u_prev = u[delta - 1]
+                            u[delta][i][j] = max(u_prev[i][j] + 1, max(u_prev[i + 1][j + 1],
+                                                                       u_prev[i - 1][j + 1],
+                                                                       u_prev[i + 1][j - 1],
+                                                                       u_prev[i - 1][j - 1]))
+                            b_prev = b[delta - 1]
+                            b[delta][i][j] = min(b_prev[i][j] - 1, min(b_prev[i + 1][j + 1],
+                                                                       b_prev[i - 1][j + 1],
+                                                                       b_prev[i + 1][j - 1],
+                                                                       b_prev[i - 1][j - 1]))
+
+                            vol[delta] += u[delta][i][j] - b[delta][i][j]
+                    a_deltas[delta - 1] += (vol[delta] - vol[delta - 1]) / 2
+
+        res = stats.linregress(np.log2(a_deltas), np.log2(deltas))
+        return 2 - -res.slope
