@@ -21,12 +21,14 @@ class FractalImage:
 
     def segment(self):
         self.to_grayscale()
-        cell_size = int(min(self.width, self.height) / 40)
+        cell_size = int(min(self.width, self.height) / 20)
         deltas = [1, 2]
-        a = np.zeros((int(self.width / cell_size), int(self.height / cell_size)))
+        w = int(self.width / cell_size) + 1
+        h = int(self.height / cell_size) + 1
+        a = np.zeros((w, h))
 
-        for x in range(int(self.width / cell_size)):
-            for y in range(int(self.height / cell_size)):
+        for x in range(w):
+            for y in range(h):
                 img = self.img.crop((x * cell_size, y * cell_size, x * cell_size + cell_size, y * cell_size + cell_size))
                 pixels = img.load()
 
@@ -60,8 +62,8 @@ class FractalImage:
         threshold = np.mean(a)
         print(threshold)
 
-        for x in range(int(self.width / cell_size)):
-            for y in range(int(self.height / cell_size)):
+        for x in range(w):
+            for y in range(h):
                 if a[x][y] > threshold:
                     ImageDraw.Draw(self.img).rectangle(
                         (x * cell_size, y * cell_size, x * cell_size + cell_size, y * cell_size + cell_size),
@@ -75,6 +77,5 @@ class FractalImage:
 
 
 image1 = FractalImage('images/img5.png')
-image1.show()
 image1.segment()
 image1.save('output/img5.png')
