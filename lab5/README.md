@@ -7,7 +7,7 @@
 
 Стало:
 
-<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/112894573-b21b2a00-90e4-11eb-9a7a-0c648a7556d4.png">
+<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/112895817-40dc7680-90e6-11eb-9702-55548283ce77.png">
 
 
 Было:
@@ -17,4 +17,4 @@
 
 Стало:
 
-<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/112894382-784a2380-90e4-11eb-95ad-ff74a2e48293.png">
+<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/112895896-5ea9db80-90e6-11eb-8252-1cd884d8da91.png">
