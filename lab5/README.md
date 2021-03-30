@@ -2,7 +2,7 @@
 
 Было:
 
-<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/112894300-5ea8dc00-90e4-11eb-9949-3358e5eec0e1.png">
+<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/112959113-c47c7e80-914b-11eb-9e2a-6fb4082d8698.png">
 
 
 Стало:
