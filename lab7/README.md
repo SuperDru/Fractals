@@ -1,20 +1,15 @@
 Результат
 
-Было:
+Кровь здорового человека (health):
 
-<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/112894300-5ea8dc00-90e4-11eb-9949-3358e5eec0e1.png">
-
-
-Стало:
-
-<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/112895817-40dc7680-90e6-11eb-9702-55548283ce77.png">
+<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/113479196-49420200-9496-11eb-8dad-1230e2a6823f.png">
 
 
-Было:
+Кровь больного лейкимией (not health):
 
-<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/112894354-708a7f00-90e4-11eb-8396-4057b2965c4b.png">
+<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/113479212-6676d080-9496-11eb-968e-284b2d87b22f.png">
 
+Сравнение:
 
-Стало:
+<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/113479544-6677d000-9498-11eb-8c97-04983574a78c.jpg">
 
-<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/112895896-5ea9db80-90e6-11eb-8252-1cd884d8da91.png">
