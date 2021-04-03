@@ -11,5 +11,5 @@
 
 Сравнение:
 
-<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/113479544-6677d000-9498-11eb-8c97-04983574a78c.jpg">
+<img width="470" alt="doc" src="https://user-images.githubusercontent.com/30354748/113479617-c9696700-9498-11eb-80fe-e400ba70a7ed.jpg">
 
